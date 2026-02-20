@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haruy Sushi</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        barlow: ['Barlow', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#ca3c3f'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-barlow text-gray-800">
+
+<!-- ================= HEADER ================= -->
+<header class="flex items-center justify-between px-6 mt-[5vh]">
+
+    <figure>
+        <img src="./assets/images/logo.png"
+             alt="Logo Haruy Sushi"
+             class="w-[30vw] max-w-[160px]">
+    </figure>
+
+    <!-- Botão hamburguer -->
+    <button id="menuBtn" class="md:hidden text-3xl">
+        ☰
+    </button>
+
+    <!-- Menu Desktop -->
+    <nav class="hidden md:block">
+        <ul class="flex gap-8 text-lg">
+            <li><a href="#cardapio" class="hover:text-primary transition">Cardápio</a></li>
+            <li><a href="#contato" class="hover:text-primary transition">Contato</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- Menu Mobile -->
+<div id="mobileMenu"
+     class="fixed top-0 right-[-100%] w-[70%] h-full bg-white shadow-lg transition-all duration-300 p-8 md:hidden z-50">
+
+    <button id="closeBtn" class="text-2xl mb-6">
+        ✕
+    </button>
+
+    <ul class="flex flex-col gap-6 text-lg">
+        <li><a href="#cardapio" class="hover:text-primary">Cardápio</a></li>
+        <li><a href="#contato" class="hover:text-primary">Contato</a></li>
+    </ul>
+
+</div>
+
+<!-- ================= BANNER ================= -->
+<section class="text-center p-8">
+
+    <div class="md:flex md:items-center md:justify-center md:gap-10">
+
+        <article class="md:w-[45%]">
+
+            <h1 class="text-2xl md:text-4xl font-semibold">
+                O verdadeiro sabor da cozinha japonesa
+            </h1>
+
+            <a href="#cardapio"
+               class="inline-block mt-4 px-8 py-4 border border-gray-800 rounded-xl text-lg min-h-[48px] hover:bg-primary hover:text-white transition">
+                Veja o Cardápio
+            </a>
+
+        </article>
+
+        <figure class="md:w-[45%] mt-6 md:mt-0">
+            <img src="./assets/images/banner.png"
+                 alt="Prato japonês"
+                 class="w-[90%] mx-auto">
+        </figure>
+
+    </div>
+
+</section>
+
+<!-- ================= CARDÁPIO ================= -->
+<section id="cardapio"
+         class="max-w-[90vw] mx-auto mt-[5vh] p-8">
+
+    <h2 class="text-3xl font-bold text-center mb-8">
+        Cardápio
+    </h2>
+
+    <!-- Sushi -->
+    <h3 class="text-primary text-xl mt-6 font-semibold">
+        Sushi & Sashimi
+    </h3>
+
+    <div class="mt-4 space-y-4">
+
+        <article>
+            <div class="flex justify-between">
+                <h4 class="font-bold text-lg">Combinado Sushi</h4>
+                <span class="text-primary">R$ 73,00</span>
+            </div>
+            <p class="text-sm text-gray-500">
+                1 Temaki Filadélfia, 10 Uramakis e 10 Sashimis
+            </p>
+        </article>
+
+        <article>
+            <div class="flex justify-between">
+                <h4 class="font-bold text-lg">Combinado Hot</h4>
+                <span class="text-primary">R$ 80,00</span>
+            </div>
+            <p class="text-sm text-gray-500">
+                10 Sashimis variados e 10 Uramakis
+            </p>
+        </article>
+
+    </div>
+
+    <!-- Bebidas -->
+    <h3 class="text-primary text-xl mt-10 font-semibold">
+        Bebidas
+    </h3>
+
+    <div class="mt-4 space-y-4">
+
+        <article>
+            <div class="flex justify-between">
+                <h4 class="font-bold text-lg">Refrigerante</h4>
+                <span class="text-primary">R$ 8,00</span>
+            </div>
+            <p class="text-sm text-gray-500">
+                Lata 350ml
+            </p>
+        </article>
+
+        <article>
+            <div class="flex justify-between">
+                <h4 class="font-bold text-lg">Água</h4>
+                <span class="text-primary">R$ 4,00</span>
+            </div>
+            <p class="text-sm text-gray-500">
+                Garrafa 500ml
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+<section id="contato"
+         class="max-w-[90vw] mx-auto mt-[5vh] p-8 text-center">
+
+    <h2 class="text-3xl font-bold mb-6">
+        Contato
+    </h2>
+
+    <p class="mb-2">📍 Rua Prof. Toledo, 500</p>
+    <p class="mb-2">📞 (15) 98765-4321</p>
+    <p class="mb-2">🕒 Aberto das 14h às 23h</p>
+
+</section>
+
+<footer class="bg-gray-800 text-white text-center p-12 mt-[5vh]">
+    <p>© 2026 Haruy Sushi - Todos os direitos reservados</p>
+</footer>
+
+<aside>
+    <a href="https://wa.me/5515987654321">
+        <img src="./assets/images/whatsapp.png"
+             class="h-[8vh] fixed bottom-[2vh] right-[4vw]"
+             alt="WhatsApp">
+    </a>
+</aside>
+
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.style.right = "0";
+    });
+
+    closeBtn.addEventListener("click", () => {
+        mobileMenu.style.right = "-100%";
+    });
+</script>
+
+</body>
+</html>
